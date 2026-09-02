@@ -15,6 +15,8 @@ const skills = [
   { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
   { name: "MySQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
   { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
+  { name: "Vercel", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg" },
+  { name: "Render", icon: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23000000'/><path d='M28 72V28h24c12 0 20 6 20 16 0 8-5 13-12 15l14 13H58L46 60H42v12H28zm14-22h10c5 0 8-2 8-6s-3-6-8-6H42v12z' fill='%2346E3B7'/></svg>" },
   { name: "cPanel", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cpanel/cpanel-original.svg" },
   { name: "CloudPanel", icon: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='35' r='20' stroke='%230052cc' stroke-width='8' fill='none' /><circle cx='35' cy='65' r='20' stroke='%230052cc' stroke-width='8' fill='none' /><circle cx='65' cy='65' r='20' stroke='%230052cc' stroke-width='8' fill='none' /></svg>" },
 ];
