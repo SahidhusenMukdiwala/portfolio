@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, Code2, Server } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { Github } from "@/components/ui/icons";
 
 interface Project {
@@ -10,8 +10,6 @@ interface Project {
   image?: string;
   tags: string[];
   github?: string;
-  githubFrontend?: string;
-  githubBackend?: string;
   live?: string;
   featured?: boolean;
 }
@@ -21,9 +19,8 @@ const projects: Project[] = [
     title: "QuickCash Ledger - Cash Flow Management",
     description: "A full-stack financial transaction and cash flow ledger application. Features dynamic sales voucher tracking, payment mode analytics, multi-tab transaction filtering, custom keyboard navigation shortcuts, and secure JWT authentication.",
     image: "/projects/quickcash.png",
-    tags: ["Next.js", "React.js", "Node.js", "Express.js", "MySQL", "Tailwind CSS", "Vercel"],
-    githubFrontend: "https://github.com/SahidhusenMukdiwala/Quick-cash-frontend",
-    githubBackend: "https://github.com/SahidhusenMukdiwala/Quick-Cash-Backend",
+    tags: ["Next.js", "React.js", "Node.js", "Express.js", "MySQL", "Tailwind CSS"],
+    // github: "https://github.com/SahidhusenMukdiwala/Quick-cash-frontend", // Client project
     live: "https://quick-cash-frontend.vercel.app/",
     featured: true,
   },
@@ -107,31 +104,7 @@ export function Projects() {
                       <span>Live Demo</span>
                     </a>
                   )}
-                  {project.githubFrontend && (
-                    <a
-                      href={project.githubFrontend}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="px-3.5 py-2 bg-bg-tertiary text-text-accent font-medium text-xs rounded-full hover:scale-105 transition-transform border border-border-subtle flex items-center gap-1.5 shadow-md"
-                      title="Frontend Repository"
-                    >
-                      <Code2 className="w-3.5 h-3.5 text-accent-start" />
-                      <span>Frontend</span>
-                    </a>
-                  )}
-                  {project.githubBackend && (
-                    <a
-                      href={project.githubBackend}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="px-3.5 py-2 bg-bg-tertiary text-text-accent font-medium text-xs rounded-full hover:scale-105 transition-transform border border-border-subtle flex items-center gap-1.5 shadow-md"
-                      title="Backend Repository"
-                    >
-                      <Server className="w-3.5 h-3.5 text-accent-end" />
-                      <span>Backend</span>
-                    </a>
-                  )}
-                  {project.github && !project.githubFrontend && (
+                  {project.github && (
                     <a
                       href={project.github}
                       target="_blank"
@@ -177,29 +150,7 @@ export function Projects() {
                       Live Demo
                     </a>
                   )}
-                  {project.githubFrontend && (
-                    <a
-                      href={project.githubFrontend}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-accent-start transition-colors flex items-center gap-1.5"
-                    >
-                      <Code2 className="w-3.5 h-3.5 text-accent-start" />
-                      Frontend Repo
-                    </a>
-                  )}
-                  {project.githubBackend && (
-                    <a
-                      href={project.githubBackend}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-accent-start transition-colors flex items-center gap-1.5"
-                    >
-                      <Server className="w-3.5 h-3.5 text-accent-end" />
-                      Backend Repo
-                    </a>
-                  )}
-                  {project.github && !project.githubFrontend && (
+                  {project.github && (
                     <a
                       href={project.github}
                       target="_blank"
@@ -219,4 +170,5 @@ export function Projects() {
     </section>
   );
 }
+
 
